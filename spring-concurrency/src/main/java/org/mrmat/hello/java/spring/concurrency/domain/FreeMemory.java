@@ -1,6 +1,8 @@
-package org.mrmat.hello.java.spring.concurrency;
+package org.mrmat.hello.java.spring.concurrency.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * An entity storing metrics
@@ -9,7 +11,7 @@ import javax.persistence.*;
  */
 @Entity
 @Access(AccessType.FIELD)
-public class MetricEntity {
+public class FreeMemory implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,7 +21,11 @@ public class MetricEntity {
     private int version;
 
     @Basic
-    Long freeMemory;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date ts = new Date();
+
+    @Basic
+    private Long freeMemory;
 
     //
     // Getter/Setters
@@ -38,6 +44,14 @@ public class MetricEntity {
 
     public void setVersion(int version) {
         this.version = version;
+    }
+
+    public Date getTs() {
+        return ts;
+    }
+
+    public void setTs(Date ts) {
+        this.ts = ts;
     }
 
     public Long getFreeMemory() {

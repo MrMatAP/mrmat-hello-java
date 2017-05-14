@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Sun May 14 12:24:26 SGT 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-015c-0533-4acb-00000a421168 
-on database directory memory:/Users/imfeldma/projects/mrmat-hello-java/spring-concurrency/testdb with class loader sun.misc.Launcher$AppClassLoader@2a139a55 
+Sun May 14 15:02:30 SGT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-015c-05c4-004a-000015944440 
+on database directory /Users/imfeldma/projects/mrmat-hello-java/spring-concurrency/build/db/concurrency with class loader sun.misc.Launcher$AppClassLoader@2a139a55 
 Loaded from file:/Users/imfeldma/.gradle/caches/modules-2/files-2.1/org.apache.derby/derby/10.13.1.1/29c42babe5c5463c6eea45487d3cfbfe8348ccd1/derby-10.13.1.1.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_121-b13
