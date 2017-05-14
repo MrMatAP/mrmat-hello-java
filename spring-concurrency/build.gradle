@@ -1,10 +1,16 @@
+
 version '1.0.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
+apply plugin: 'docker'
 
 sourceCompatibility = 1.8
+
+war {
+    baseName = 'spring-concurrency'
+}
 
 repositories {
     mavenCentral()
@@ -21,4 +27,16 @@ dependencies {
     runtime('org.apache.derby:derby')
     providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+task buildDocker(type: Docker, dependsOn: build) {
+    push = false
+    applicationName = war.baseName
+    dockerfile = file('src/main/docker/Dockerfile')
+    doFirst {
+        copy {
+            from war
+            into stageDir
+        }
+    }
 }
