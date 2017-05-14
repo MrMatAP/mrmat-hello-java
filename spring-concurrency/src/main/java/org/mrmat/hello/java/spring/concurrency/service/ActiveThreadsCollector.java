@@ -2,6 +2,7 @@ package org.mrmat.hello.java.spring.concurrency.service;
 
 import org.apache.log4j.Logger;
 import org.mrmat.hello.java.spring.concurrency.domain.ActiveThreads;
+import org.mrmat.hello.java.spring.concurrency.domain.StatusEntity;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -28,8 +29,13 @@ public class ActiveThreadsCollector {
         ActiveThreads activeThreads = new ActiveThreads();
         activeThreads.setActiveThreads(Thread.activeCount());
         em.persist(activeThreads);
-        em.flush();
         LOG.info("Active Threads: " + activeThreads.getActiveThreads());
+
+        StatusEntity statusEntity = em.createQuery("SELECT s FROM StatusEntity s", StatusEntity.class).getSingleResult();
+        statusEntity.setActiveThreadEntries(statusEntity.getActiveThreadEntries() + 1);
+        em.persist(statusEntity);
+
+        em.flush();
     }
 
     @PostConstruct

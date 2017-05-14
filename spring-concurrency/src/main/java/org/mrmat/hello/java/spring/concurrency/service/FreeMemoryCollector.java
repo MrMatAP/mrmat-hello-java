@@ -2,6 +2,7 @@ package org.mrmat.hello.java.spring.concurrency.service;
 
 import org.apache.log4j.Logger;
 import org.mrmat.hello.java.spring.concurrency.domain.FreeMemory;
+import org.mrmat.hello.java.spring.concurrency.domain.StatusEntity;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -30,8 +31,13 @@ public class FreeMemoryCollector {
         FreeMemory freeMemory = new FreeMemory();
         freeMemory.setFreeMemory(runtime.freeMemory());
         em.persist(freeMemory);
-        em.flush();
         LOG.info("Free memory: " + freeMemory.getFreeMemory());
+
+        StatusEntity statusEntity = em.createQuery("SELECT s FROM StatusEntity s", StatusEntity.class).getSingleResult();
+        statusEntity.setFreeMemoryEntries(statusEntity.getFreeMemoryEntries() + 1);
+        em.persist(statusEntity);
+
+        em.flush();
     }
 
     @PostConstruct

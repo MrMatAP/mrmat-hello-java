@@ -16,3 +16,6 @@
 .idea/libraries
 .idea/artifacts
 
+## Derby
+
+**/derby.log
