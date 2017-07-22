@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/spring-batch" />
             <option value="$PROJECT_DIR$/spring-concurrency" />
           </set>
         </option>

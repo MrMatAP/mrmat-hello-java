@@ -1,51 +1,90 @@
-#!/usr/bin/env groovy
-/**
- * A scripted pipeline to build mrmat-hello-java
- * TODO: Get Gradle from the path, including its environment
- * TODO: SonarQube, with its environment
- */
+#!groovy
 
-try {
+pipeline {
+    agent any
 
-    properties(
-            [[$class: 'BuildDiscarderProperty',
-              strategy: [$class: 'LogRotator', numToKeepStr: '10']]]
-    )
-
-    node {
-        stage '\u2776 Prepare'
-        echo "\u27A1 BUILD_URL=${env.BUILD_URL}"
-        echo "\u27A1 BUILD_CAUSE=${env.BUILD_CAUSE}"
-        echo "\u27A1 WORKSPACE=${env.WORKSPACE}"
-        checkout scm
-
-        stage '\u2776 Build'
-        sh './gradlew clean build'
-
-        //stage '\u2776 Test'
-        //junit 'build/test-results/**/TEST-*.xml'
-
-        stage '\u2776 Deploy'
-        archiveArtifacts artifacts: '**/build/libs/*.war', fingerprint: true
-
-        stage '\u2776 Cleanup'
-        deleteDir()
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        disableConcurrentBuilds()
     }
 
-
-} catch(ex) {
-
-    currentBuild.result = 'FAILURE'
-    echo "Caught exception: ${ex.getMessage()}"
-
-} finally {
-
-    (currentBuild.result != 'ABORTED') && node('master') {
-        // Do some stuff on the master node, if required
+    parameters {
+        booleanParam(name: 'RELEASE_BUILD', defaultValue: false, description: 'Will this be a release build then, sir?')
     }
 
-    //
-    // Propagate the error if required
+    tools {
+        gradle 'gradle-3.5'
+        jdk 'jdk-1.8'
+    }
 
-    //if(ex) throw ex
+    stages {
+
+        stage('QA Gate') {
+            steps {
+                slackSend botUser: true, message: "QA Gate Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                withSonarQubeEnv('jenkins-sonar') {
+                    sh 'gradle clean package sonar:sonar'
+                }
+                script {
+                    timeout(time: 1, unit: 'HOURS') {
+                        def qg = waitForQualityGate()
+                        if(qg.status != 'OK') {
+                            error "Pipeline aborted due to quality gate failure: ${qg.status}"
+                            slackSend botUser: true, message: "QA Gate FAILED - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                        }
+                    }
+                }
+            }
+        }
+        stage('\uD83D\uDEE0 Build') {
+            when { expression { return ! params.RELEASE_BUILD } }
+            steps {
+                slackSend botUser: true, message: "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                ansiColor('xterm') {
+                    sh 'gradle clean build'
+                }
+				/*
+                script {
+                    def pom = readMavenPom file: "${env.WORKSPACE}/pom.xml"
+                    currentBuild.displayName = "${currentBuild.number}: \uD83D\uDEE0 Build ${pom.version}"
+                }
+                */
+            }
+        }
+        stage('\uD83C\uDF81 Release') {
+            when { expression { return (params.RELEASE_BUILD && (env.BRANCH_NAME == 'develop')) } }
+            steps {
+                slackSend botUser: true, message: "Release Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                ansiColor('xterm') {
+                    sh "git checkout -f develop"
+                    //sh 'mvn -B jgitflow:release-start jgitflow:release-finish && git push --tags origin master develop'
+                    //sh "git checkout -f master"
+                    //sh 'mvn site site:deploy'
+                }
+                /*
+                script {
+                    def pom = readMavenPom file: "${env.WORKSPACE}/pom.xml"
+                    currentBuild.displayName = "${currentBuild.number}: \uD83C\uDF81 Release ${pom.version}"
+                    currentBuild.rawBuild.keepLog(true)
+                }
+                */
+            }
+        }
+
+    }
+    post {
+        always {
+            junit 'target/surefire-reports/*.xml'
+            archive 'target/mrmat-test-maven-project-*.jar'
+            deleteDir()
+        }
+        success {
+            echo "Build is a SUCCESS"
+            slackSend botUser: true, message: "Build SUCCESS - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+        }
+        failure {
+            echo "Build is a FAILURE"
+            slackSend botUser: true, message: "Build FAILED - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+        }
+    }
 }

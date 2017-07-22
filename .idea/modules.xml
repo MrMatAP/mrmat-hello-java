@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" filepath="$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-batch.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-batch.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-concurrency.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-concurrency.iml" />
     </modules>
   </component>

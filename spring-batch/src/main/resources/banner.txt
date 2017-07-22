@@ -1,0 +1,5 @@
+
+  /\/\  _ __ /\/\   __ _| |_
+ /    \| '__/    \ / _` | __|
+/ /\/\ \ | / /\/\ \ (_| | |_   ${AnsiColor.RED}${application.title} - ${application.version}
+\/    \/_| \/    \/\__,_|\__|
