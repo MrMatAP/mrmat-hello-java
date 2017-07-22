@@ -23,7 +23,7 @@ pipeline {
             steps {
                 slackSend botUser: true, message: "QA Gate Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
                 withSonarQubeEnv('jenkins-sonar') {
-                    sh 'gradle clean package sonar:sonar'
+                    sh 'gradle clean build sonar'
                 }
                 script {
                     timeout(time: 1, unit: 'HOURS') {
