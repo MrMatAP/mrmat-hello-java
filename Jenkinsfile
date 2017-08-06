@@ -55,7 +55,7 @@ pipeline {
             steps {
                 slackSend botUser: true, message: "Release Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
                 ansiColor('xterm') {
-                    sh "git clean -d -x -f"
+                    sh "git checkout -f develop"
                     gradleBuild(this, "final")
                     sh "git checkout -f master && git merge develop && git push"
                 }
@@ -68,11 +68,13 @@ pipeline {
 
     }
     post {
+        /*
         always {
             //junit 'target/surefire-reports/*.xml'
             //archive 'target/mrmat-test-maven-project-*.jar'
             deleteDir()
         }
+        */
         success {
             echo "Build is a SUCCESS"
             slackSend botUser: true, message: "Build SUCCESS - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
