@@ -33,6 +33,7 @@ sonarqube {
         property "sonar.sourceEncoding", "UTF-8"
     }
 }
+nebulaRelease.addReleaseBranchPattern(/develop/)
 
 allprojects {
 
