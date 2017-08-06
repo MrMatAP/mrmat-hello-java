@@ -25,6 +25,7 @@ pipeline {
                 withSonarQubeEnv('jenkins-sonar') {
                     sh "gradle --info sonarqube"
                 }
+                /*
                 script {
                     timeout(time: 1, unit: 'HOURS') {
                         def qg = waitForQualityGate()
@@ -34,6 +35,7 @@ pipeline {
                         }
                     }
                 }
+                */
             }
         }
         stage('\uD83D\uDEE0 Build') {
