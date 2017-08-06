@@ -1,3 +1,5 @@
 include 'spring-concurrency'
 include 'spring-batch'
 
+name = 'mrmat-hello-java'
+
