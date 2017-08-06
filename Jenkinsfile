@@ -68,13 +68,11 @@ pipeline {
 
     }
     post {
-        /*
         always {
             //junit 'target/surefire-reports/*.xml'
             //archive 'target/mrmat-test-maven-project-*.jar'
             deleteDir()
         }
-        */
         success {
             echo "Build is a SUCCESS"
             slackSend botUser: true, message: "Build SUCCESS - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
