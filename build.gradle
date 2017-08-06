@@ -58,3 +58,4 @@ task buildMetadata() {
     }
 }
 tasks.build.finalizedBy tasks.buildMetadata
+tasks.postRelease.finalizedBy tasks.buildMetadata
