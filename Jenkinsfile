@@ -69,8 +69,8 @@ pipeline {
     }
     post {
         always {
-            junit 'target/surefire-reports/*.xml'
-            archive 'target/mrmat-test-maven-project-*.jar'
+            //junit 'target/surefire-reports/*.xml'
+            //archive 'target/mrmat-test-maven-project-*.jar'
             deleteDir()
         }
         success {
