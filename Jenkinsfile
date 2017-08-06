@@ -23,7 +23,7 @@ pipeline {
             steps {
                 slackSend botUser: true, message: "QA Gate Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
                 withSonarQubeEnv('jenkins-sonar') {
-                    sh 'gradle clean build sonar'
+                    gradleBuild(this, "clean build sonar")
                 }
                 script {
                     timeout(time: 1, unit: 'HOURS') {
@@ -41,14 +41,11 @@ pipeline {
             steps {
                 slackSend botUser: true, message: "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
                 ansiColor('xterm') {
-                    sh 'gradle clean build'
+                    gradleBuild(this, "clean build")
                 }
-				/*
                 script {
-                    def pom = readMavenPom file: "${env.WORKSPACE}/pom.xml"
-                    currentBuild.displayName = "${currentBuild.number}: \uD83D\uDEE0 Build ${pom.version}"
+                    currentBuild.displayName = "${currentBuild.number}: \uD83D\uDEE0 Build ${gradleBuild.version}"
                 }
-                */
             }
         }
         stage('\uD83C\uDF81 Release') {
@@ -57,17 +54,13 @@ pipeline {
                 slackSend botUser: true, message: "Release Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
                 ansiColor('xterm') {
                     sh "git checkout -f develop"
-                    //sh 'mvn -B jgitflow:release-start jgitflow:release-finish && git push --tags origin master develop'
-                    //sh "git checkout -f master"
-                    //sh 'mvn site site:deploy'
+                    gradleBuild(this, "final")
+                    sh "git checkout -f master && git merge develop && git push"
                 }
-                /*
                 script {
-                    def pom = readMavenPom file: "${env.WORKSPACE}/pom.xml"
-                    currentBuild.displayName = "${currentBuild.number}: \uD83C\uDF81 Release ${pom.version}"
-                    currentBuild.rawBuild.keepLog(true)
+                    currentBuild.displayName = "${currentBuild.number}: \uD83C\uDF81 Release ${gradleBuild.version}"
+                    keepBuild(true)
                 }
-                */
             }
         }
 
