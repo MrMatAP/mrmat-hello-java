@@ -55,7 +55,7 @@ pipeline {
             steps {
                 slackSend botUser: true, message: "Release Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
                 ansiColor('xterm') {
-                    sh "git checkout -f develop"
+                    sh "git checkout -f develop && git clean -d -x -f"
                     gradleBuild(this, "final")
                     sh "git checkout -f master && git merge develop && git push"
                 }
