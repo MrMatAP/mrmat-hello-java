@@ -70,7 +70,7 @@ pipeline {
     post {
         always {
             //junit 'target/surefire-reports/*.xml'
-            //archive 'target/mrmat-test-maven-project-*.jar'
+            archive 'javaee-jsp/build/libs/javaee-jsp-*.war'
             deleteDir()
         }
         success {

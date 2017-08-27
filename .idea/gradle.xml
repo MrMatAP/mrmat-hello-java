@@ -9,6 +9,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/javaee-jsf" />
+            <option value="$PROJECT_DIR$/javaee-jsp" />
+            <option value="$PROJECT_DIR$/simple-war" />
             <option value="$PROJECT_DIR$/spring-batch" />
             <option value="$PROJECT_DIR$/spring-concurrency" />
           </set>
