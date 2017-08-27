@@ -2,7 +2,6 @@ include 'spring-concurrency'
 include 'spring-batch'
 
 rootProject.name = 'mrmat-hello-java'
-include 'simple-war'
-include 'javaee-jsf'
 include 'javaee-jsp'
+include 'javaee-jsf'
 

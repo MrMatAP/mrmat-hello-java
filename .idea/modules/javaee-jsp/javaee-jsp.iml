@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id=":javaee-jsp" external.linked.project.path="$MODULE_DIR$/../../../javaee-jsp" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="org.mrmat" external.system.module.version="" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
-    <facet type="web" name="Web Gradle : javaee-jsp-0.13.0-dev.0.uncommitted+3a880bf.war">
+    <facet type="web" name="Web Gradle : javaee-jsp-0.13.0-dev.1.uncommitted+fbcc0d6.war">
       <configuration>
         <webroots>
           <root url="file://$MODULE_DIR$/../../../javaee-jsp/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots />
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/../../../javaee-jsp/src/main/resources" />
+          <root url="file://$MODULE_DIR$/../../../javaee-jsp/src/main/java" />
+        </sourceRoots>
       </configuration>
     </facet>
   </component>

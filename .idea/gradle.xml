@@ -3,7 +3,7 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="/opt/apps/gradle" />
         <option name="modules">
@@ -11,7 +11,6 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/javaee-jsf" />
             <option value="$PROJECT_DIR$/javaee-jsp" />
-            <option value="$PROJECT_DIR$/simple-war" />
             <option value="$PROJECT_DIR$/spring-batch" />
             <option value="$PROJECT_DIR$/spring-concurrency" />
           </set>
