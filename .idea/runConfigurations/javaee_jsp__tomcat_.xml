@@ -68,9 +68,7 @@
       </SHUTDOWN>
     </ConfigurationWrapper>
     <method>
-      <option name="BuildArtifacts" enabled="true">
-        <artifact name="Gradle : org.mrmat : javaee-jsp-0.13.0-dev.1.uncommitted+fbcc0d6.war (exploded)" />
-      </option>
+      <option name="BuildArtifacts" enabled="true" />
     </method>
   </configuration>
 </component>

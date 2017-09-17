@@ -15,7 +15,7 @@
         </sourceRoots>
       </configuration>
     </facet>
-    <facet type="web" name="Web Gradle : javaee-jsf-0.13.0-dev.1.uncommitted+fbcc0d6.war">
+    <facet type="web" name="Web Gradle : javaee-jsf-0.13.0-dev.2.uncommitted+71a875e.war">
       <configuration>
         <descriptors>
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/../../javaee-jsf/src/main/webapp/WEB-INF/web.xml" />
