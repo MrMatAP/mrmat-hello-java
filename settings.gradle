@@ -4,4 +4,5 @@ include 'spring-batch'
 rootProject.name = 'mrmat-hello-java'
 include 'javaee-jsp'
 include 'javaee-jsf'
+include 'java8-optional'
 
