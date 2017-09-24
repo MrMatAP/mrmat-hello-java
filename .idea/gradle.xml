@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/javaee-jsp" />
             <option value="$PROJECT_DIR$/spring-batch" />
             <option value="$PROJECT_DIR$/spring-concurrency" />
+            <option value="$PROJECT_DIR$/ws-dropwizard" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

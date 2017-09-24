@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" filepath="$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-batch.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-batch.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-concurrency.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-concurrency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ws-dropwizard.iml" filepath="$PROJECT_DIR$/.idea/modules/ws-dropwizard.iml" />
     </modules>
   </component>
 </project>
