@@ -68,7 +68,9 @@
       </SHUTDOWN>
     </ConfigurationWrapper>
     <method>
-      <option name="BuildArtifacts" enabled="true" />
+      <option name="BuildArtifacts" enabled="true">
+        <artifact name="Gradle : org.mrmat : javaee-jaxws-0.13.0-dev.7.uncommitted+jax.ws.3be77d3.war (exploded)" />
+      </option>
     </method>
   </configuration>
 </component>
