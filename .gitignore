@@ -1,6 +1,9 @@
 .gradle
 !gradle/wrapper/gradle-wrapper.jar
 
+**/out/
+**/build
+
 ### STS ###
 .apt_generated
 .classpath
@@ -14,7 +17,6 @@
 .idea/workspace.xml
 .idea/libraries
 .idea/artifacts
-**/out/
 
 
 ## Derby
