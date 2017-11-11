@@ -1,2 +1,3 @@
-# mrmat-hello-java
+# MrMat :: Hello Java
+
 Experiments in Java

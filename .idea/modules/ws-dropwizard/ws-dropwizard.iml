@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":ws-dropwizard" external.linked.project.path="$MODULE_DIR$/../../ws-dropwizard" external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="org.mrmat" external.system.module.version="" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":ws-dropwizard" external.linked.project.path="$MODULE_DIR$/../../../ws-dropwizard" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="org.mrmat" external.system.module.version="" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <output url="file://$MODULE_DIR$/../../ws-dropwizard/out/production/classes" />
-    <output-test url="file://$MODULE_DIR$/../../ws-dropwizard/out/test/classes" />
+    <output url="file://$MODULE_DIR$/../../../ws-dropwizard/out/production/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../ws-dropwizard/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../ws-dropwizard">
-      <sourceFolder url="file://$MODULE_DIR$/../../ws-dropwizard/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../ws-dropwizard/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../ws-dropwizard/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../../ws-dropwizard/src/test/resources" type="java-test-resource" />
-      <excludeFolder url="file://$MODULE_DIR$/../../ws-dropwizard/.gradle" />
-      <excludeFolder url="file://$MODULE_DIR$/../../ws-dropwizard/build" />
-      <excludeFolder url="file://$MODULE_DIR$/../../ws-dropwizard/out" />
+    <content url="file://$MODULE_DIR$/../../../ws-dropwizard">
+      <sourceFolder url="file://$MODULE_DIR$/../../../ws-dropwizard/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../ws-dropwizard/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../ws-dropwizard/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../ws-dropwizard/src/test/resources" type="java-test-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../ws-dropwizard/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../ws-dropwizard/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../ws-dropwizard/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

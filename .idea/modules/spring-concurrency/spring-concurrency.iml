@@ -1,40 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":spring-batch" external.linked.project.path="$MODULE_DIR$/../../spring-batch" external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="mrmat-hello-java" external.system.module.version="1.0.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":spring-concurrency" external.linked.project.path="$MODULE_DIR$/../../../spring-concurrency" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="mrmat-hello-java" external.system.module.version="1.0.0-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration />
     </facet>
-    <facet type="web" name="Web Gradle : spring-batch-1.0.0-SNAPSHOT.war">
+    <facet type="web" name="Web Gradle : spring-concurrency-1.0.0-SNAPSHOT.war">
       <configuration>
         <webroots>
-          <root url="file://$MODULE_DIR$/../../spring-batch/src/main/webapp" relative="/" />
+          <root url="file://$MODULE_DIR$/../../../spring-concurrency/src/main/webapp" relative="/" />
         </webroots>
         <sourceRoots>
-          <root url="file://$MODULE_DIR$/../../spring-batch/src/main/java" />
-          <root url="file://$MODULE_DIR$/../../spring-batch/src/main/resources" />
+          <root url="file://$MODULE_DIR$/../../../spring-concurrency/src/main/java" />
+          <root url="file://$MODULE_DIR$/../../../spring-concurrency/src/main/resources" />
         </sourceRoots>
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager">
-    <output url="file://$MODULE_DIR$/../../spring-batch/out/production/classes" />
-    <output-test url="file://$MODULE_DIR$/../../spring-batch/out/test/classes" />
+    <output url="file://$MODULE_DIR$/../../../spring-concurrency/out/production/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../spring-concurrency/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../spring-batch">
-      <sourceFolder url="file://$MODULE_DIR$/../../spring-batch/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../spring-batch/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../spring-batch/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../../spring-batch/src/test/resources" type="java-test-resource" />
-      <excludeFolder url="file://$MODULE_DIR$/../../spring-batch/.gradle" />
-      <excludeFolder url="file://$MODULE_DIR$/../../spring-batch/build" />
-      <excludeFolder url="file://$MODULE_DIR$/../../spring-batch/out" />
+    <content url="file://$MODULE_DIR$/../../../spring-concurrency">
+      <sourceFolder url="file://$MODULE_DIR$/../../../spring-concurrency/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../spring-concurrency/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../spring-concurrency/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../spring-concurrency/src/test/resources" type="java-test-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../spring-concurrency/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../spring-concurrency/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../spring-concurrency/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apache.cxf:cxf-spring-boot-starter-jaxrs:3.1.11" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.boot:spring-boot-starter-data-jpa:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.boot:spring-boot-starter-web:1.5.3.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.boot:spring-boot-starter-batch:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.boot:spring-boot-devtools:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.boot:spring-boot-starter:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apache.cxf:cxf-spring-boot-autoconfigure:3.1.11" level="project" />
@@ -54,7 +53,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.8.8" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-web:4.3.8.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-webmvc:4.3.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.batch:spring-batch-core:3.0.7.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.boot:spring-boot:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.5.3.RELEASE" level="project" />
@@ -88,26 +86,17 @@
     <orderEntry type="library" scope="PROVIDED" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.8.8" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-expression:4.3.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.ibm.jbatch:com.ibm.jbatch-tck-spi:1.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.thoughtworks.xstream:xstream:1.4.7" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.codehaus.jettison:jettison:1.2" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.batch:spring-batch-infrastructure:3.0.7.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: ch.qos.logback:logback-classic:1.1.11" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.slf4j:jul-to-slf4j:1.7.25" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.slf4j:log4j-over-slf4j:1.7.25" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.codehaus.woodstox:woodstox-core-asl:4.4.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apache.ws.xmlschema:xmlschema-core:2.2.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apache.tomcat:tomcat-juli:8.5.14" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.batch:javax.batch-api:1.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: xmlpull:xmlpull:1.1.3.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: xpp3:xpp3_min:1.1.4c" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.retry:spring-retry:1.2.0.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: ch.qos.logback:logback-core:1.1.11" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.codehaus.woodstox:stax2-api:3.1.4" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.cxf:cxf-spring-boot-starter-jaxrs:3.1.11" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.boot:spring-boot-starter-data-jpa:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.boot:spring-boot-starter-web:1.5.3.RELEASE" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.boot:spring-boot-starter-batch:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.boot:spring-boot-devtools:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.derby:derby:10.13.1.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.boot:spring-boot-starter:1.5.3.RELEASE" level="project" />
@@ -127,7 +116,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.8.8" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework:spring-web:4.3.8.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework:spring-webmvc:4.3.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.batch:spring-batch-core:3.0.7.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.boot:spring-boot:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.5.3.RELEASE" level="project" />
@@ -158,26 +146,17 @@
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.8.8" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework:spring-expression:4.3.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.ibm.jbatch:com.ibm.jbatch-tck-spi:1.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.thoughtworks.xstream:xstream:1.4.7" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.codehaus.jettison:jettison:1.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.batch:spring-batch-infrastructure:3.0.7.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: ch.qos.logback:logback-classic:1.1.11" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.slf4j:jul-to-slf4j:1.7.25" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.slf4j:log4j-over-slf4j:1.7.25" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.codehaus.woodstox:woodstox-core-asl:4.4.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.ws.xmlschema:xmlschema-core:2.2.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.tomcat:tomcat-juli:8.5.14" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: javax.batch:javax.batch-api:1.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: xmlpull:xmlpull:1.1.3.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: xpp3:xpp3_min:1.1.4c" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.retry:spring-retry:1.2.0.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: ch.qos.logback:logback-core:1.1.11" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.codehaus.woodstox:stax2-api:3.1.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.apache.cxf:cxf-spring-boot-starter-jaxrs:3.1.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.boot:spring-boot-starter-data-jpa:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.boot:spring-boot-starter-web:1.5.3.RELEASE" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.boot:spring-boot-starter-batch:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.boot:spring-boot-devtools:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.boot:spring-boot-starter-test:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.boot:spring-boot-starter:1.5.3.RELEASE" level="project" />
@@ -197,7 +176,6 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.8.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.springframework:spring-web:4.3.8.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.springframework:spring-webmvc:4.3.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.batch:spring-batch-core:3.0.7.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.boot:spring-boot:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.5.3.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.boot:spring-boot-test:1.5.3.RELEASE" level="project" />
@@ -238,10 +216,6 @@
     <orderEntry type="library" scope="TEST" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.8.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.8.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.springframework:spring-expression:4.3.8.RELEASE" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.ibm.jbatch:com.ibm.jbatch-tck-spi:1.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: com.thoughtworks.xstream:xstream:1.4.7" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.codehaus.jettison:jettison:1.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.batch:spring-batch-infrastructure:3.0.7.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: net.minidev:json-smart:2.2.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.objenesis:objenesis:2.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" level="project" />
@@ -251,10 +225,6 @@
     <orderEntry type="library" scope="TEST" name="Gradle: org.codehaus.woodstox:woodstox-core-asl:4.4.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.apache.ws.xmlschema:xmlschema-core:2.2.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.apache.tomcat:tomcat-juli:8.5.14" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: javax.batch:javax.batch-api:1.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: xmlpull:xmlpull:1.1.3.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: xpp3:xpp3_min:1.1.4c" level="project" />
-    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.retry:spring-retry:1.2.0.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: net.minidev:accessors-smart:1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: ch.qos.logback:logback-core:1.1.11" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.codehaus.woodstox:stax2-api:3.1.4" level="project" />
