@@ -3,9 +3,10 @@ package org.mrmat.hello.java.javaee.jaxws;
 import javax.jws.WebService;
 
 /**
- * TODO: Add description here
+ * The SOAP Service implementation class must implement the SOAP SEI and be annotated with @WebService.
  *
  * @author imfeldma
+ * @see HelloSEI
  */
 @WebService(
         endpointInterface = "org.mrmat.hello.java.javaee.jaxws.HelloSEI",   // Note: Not allowed on the SEI
@@ -16,11 +17,28 @@ import javax.jws.WebService;
 public class HelloService implements HelloSEI {
 
     @Override
-    public PersonResponseModel greetPerson(PersonRequestModel person) {
+    public PersonResponseModel greetPersonBare(PersonRequestModel person) {
+        return genericResponse(person);
+    }
+
+    @Override
+    public PersonResponseModel greetPersonDefault(PersonRequestModel person) {
+        return genericResponse(person);
+    }
+
+    @Override
+    public PersonResponseModel greetPersonOverride(PersonRequestModel person) {
+        return genericResponse(person);
+    }
+
+    private PersonResponseModel genericResponse(PersonRequestModel request) {
+        if(request == null)
+            return new PersonResponseModel("NULL", "NULL", "NULL");
+
         return new PersonResponseModel(
-                person.getName(),
-                person.getSurname(),
-                "Hello " + person.getName() + " " + person.getSurname()
+                request.getName(),
+                request.getSurname(),
+                "Hello " + request.getName() + " " + request.getSurname()
         );
     }
 }

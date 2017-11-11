@@ -1,14 +1,27 @@
 package org.mrmat.hello.java.javaee.jaxws;
 
+import javax.xml.bind.annotation.*;
+
 /**
- * TODO: Add description here
+ * A response model for greeting a person
  *
  * @author imfeldma
  */
+@XmlType(propOrder = {
+        "name",
+        "surname",
+        "greeting"
+})
+@XmlAccessorType(XmlAccessType.FIELD)
 public class PersonResponseModel {
 
+    @XmlElement
     private String name;
+
+    @XmlElement
     private String surname;
+
+    @XmlElement
     private String greeting;
 
     //
