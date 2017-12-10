@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="docker: spring-concurrency" type="docker-deploy" factoryName="dockerfile" server-name="Docker (localhost)">
-    <deployment type="dockerfile">
+  <configuration default="false" name="docker: spring-concurrency" type="docker-deploy" factoryName="Docker Deployment" server-name="Docker (localhost)">
+    <deployment type="dockerfile" path="$PROJECT_DIR$/spring-concurrency/src/main/docker/Dockerfile">
       <settings>
         <option name="JSONFilePath" value="" />
         <option name="command" value="" />
@@ -11,10 +10,8 @@
         <option name="startBrowserSettings">
           <browser url="http://127.0.0.1" />
         </option>
-        <option name="sourceFilePath" value="$PROJECT_DIR$/spring-concurrency/src/main/docker/Dockerfile" />
       </settings>
     </deployment>
     <method />
   </configuration>
 </component>
-

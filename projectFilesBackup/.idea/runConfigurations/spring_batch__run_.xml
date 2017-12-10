@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="MrMat :: Hello Java :: JavaEE :: JAX-WS" type="GradleRunConfiguration" factoryName="Gradle">
+  <configuration default="false" name="spring-batch (run)" type="GradleRunConfiguration" factoryName="Gradle" singleton="true">
     <ExternalSystemSettings>
       <option name="executionName" />
-      <option name="externalProjectPath" value="$PROJECT_DIR$/javaee-jaxws" />
+      <option name="externalProjectPath" value="$PROJECT_DIR$/spring-batch" />
       <option name="externalSystemIdString" value="GRADLE" />
       <option name="scriptParameters" value="" />
       <option name="taskDescriptions">
@@ -11,8 +10,7 @@
       </option>
       <option name="taskNames">
         <list>
-          <option value="clean" />
-          <option value="build" />
+          <option value="bootRun" />
         </list>
       </option>
       <option name="vmOptions" value="" />
@@ -20,4 +18,3 @@
     <method />
   </configuration>
 </component>
-

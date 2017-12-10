@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="javaee-jsp (tomcat)" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="tomcat85@localhost" ALTERNATIVE_JRE_ENABLED="false">
     <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
@@ -75,4 +74,3 @@
     </method>
   </configuration>
 </component>
-
