@@ -24,10 +24,6 @@ description = "Java projects that don't currently warrant their own repository"
 apply plugin: 'java'
 apply plugin: 'idea'
 
-repositories {
-    mavenLocal()
-}
-
 sonarqube {
     properties {
         property "sonar.sourceEncoding", "UTF-8"
@@ -36,6 +32,14 @@ sonarqube {
 nebulaRelease.addReleaseBranchPattern(/develop/)
 
 allprojects {
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    sourceCompatibility = "1.10"
+    targetCompatibility = "1.10"
 
     task info {
         doLast {

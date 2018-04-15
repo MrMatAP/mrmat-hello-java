@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+ext {
+    moduleName = 'org.mrmat.hello.java.modules.impl.english'
+}
+
+dependencies {
+    compile project(':java9-modules-api')
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.1.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.1.0")
+}
+
+test {
+    useJUnitPlatform()
+}
+
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+        ]
+        classpath = files()
+    }
+}

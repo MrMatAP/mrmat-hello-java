@@ -2,8 +2,19 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="java8-optional" target="1.8" />
+      <module name="java9-modules-api" target="1.8" />
+      <module name="java9-modules-app" target="1.8" />
+      <module name="java9-modules-english" target="1.8" />
+      <module name="java9-modules-german" target="1.8" />
+      <module name="javaee-jaxws" target="1.8" />
+      <module name="javaee-jsf" target="1.8" />
+      <module name="javaee-jsp" target="1.8" />
       <module name="mrmat-hello-java_main" target="1.8" />
       <module name="mrmat-hello-java_test" target="1.8" />
+      <module name="spring-batch" target="1.8" />
+      <module name="spring-concurrency" target="1.8" />
+      <module name="ws-dropwizard" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

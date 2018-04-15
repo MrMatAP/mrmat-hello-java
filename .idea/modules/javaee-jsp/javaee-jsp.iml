@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id=":javaee-jsp" external.linked.project.path="$MODULE_DIR$/../../../javaee-jsp" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="org.mrmat" external.system.module.version="" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
-    <facet type="web" name="Web Gradle : javaee-jsp-0.13.0-dev.10.uncommitted+c99d43e.war">
+    <facet type="web" name="Web Gradle : javaee-jsp-0.13.0-dev.11.uncommitted+aecfa21.war">
       <configuration>
         <webroots>
           <root url="file://$MODULE_DIR$/../../../javaee-jsp/src/main/webapp" relative="/" />
@@ -13,7 +13,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/../../../javaee-jsp/out/production/classes" />
     <output-test url="file://$MODULE_DIR$/../../../javaee-jsp/out/test/classes" />
     <exclude-output />

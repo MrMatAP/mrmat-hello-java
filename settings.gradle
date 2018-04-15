@@ -6,4 +6,8 @@ include 'javaee-jsf'
 include 'java8-optional'
 include 'ws-dropwizard'
 include 'javaee-jaxws'
+include 'java9-modules-app'
+include 'java9-modules-api'
+include 'java9-modules-english'
+include 'java9-modules-german'
 

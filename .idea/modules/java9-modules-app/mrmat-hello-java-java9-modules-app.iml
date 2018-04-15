@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":java9-modules-app" external.linked.project.path="$MODULE_DIR$/../../../java9-modules-app" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="mrmat-hello-java" external.system.module.version="" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../java9-modules-app/out/production/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../java9-modules-app/out/test/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../java9-modules-app">
+      <sourceFolder url="file://$MODULE_DIR$/../../../java9-modules-app/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../java9-modules-app/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../java9-modules-app/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../java9-modules-app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../java9-modules-app/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="mrmat-hello-java-java9-modules-api" />
+    <orderEntry type="module" module-name="mrmat-hello-java-java9-modules-english" scope="RUNTIME" />
+    <orderEntry type="module" module-name="mrmat-hello-java-java9-modules-german" scope="RUNTIME" />
+    <orderEntry type="module" module-name="mrmat-hello-java-java9-modules-english" scope="TEST" />
+    <orderEntry type="module" module-name="mrmat-hello-java-java9-modules-german" scope="TEST" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.1.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.junit.platform:junit-platform-commons:1.1.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.apiguardian:apiguardian-api:1.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.opentest4j:opentest4j:1.0.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.1.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.junit.platform:junit-platform-engine:1.1.0" level="project" />
+  </component>
+</module>

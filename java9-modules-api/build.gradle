@@ -1,0 +1,52 @@
+apply plugin: 'java'
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.1.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.1.0")
+}
+
+ext {
+    moduleName = 'org.mrmat.hello.java.modules.api'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+        ]
+        classpath = files()
+    }
+}
+
+compileTestJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'org.junit.jupiter.api',
+                '--add-reads', "$moduleName=org.junit.jupiter.api",
+                '--patch-module', "$moduleName=" + files(sourceSets.test.java.srcDirs).asPath,
+        ]
+        classpath = files()
+    }
+}
+
+test {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        jvmArgs = [
+                '--module-path', classpath.asPath,
+                '--add-modules', 'ALL-MODULE-PATH',
+                '--add-reads', "$moduleName=org.junit.jupiter.api",
+                '--add-exports', "$moduleName/org.mrmat.hello.java.modules.api.test=org.junit.platform.commons",
+                '--add-opens', "$moduleName/org.mrmat.hello.java.modules.api.test=org.junit.platform.commons",
+                '--patch-module', "$moduleName=" + files(sourceSets.test.java.outputDir).asPath,
+        ]
+        classpath = files()
+    }
+}
