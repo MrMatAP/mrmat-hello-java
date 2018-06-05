@@ -5,7 +5,7 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="/usr/local/Cellar/gradle/4.6/libexec" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/4.7/libexec" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -17,8 +17,6 @@
             <option value="$PROJECT_DIR$/javaee-jaxws" />
             <option value="$PROJECT_DIR$/javaee-jsf" />
             <option value="$PROJECT_DIR$/javaee-jsp" />
-            <option value="$PROJECT_DIR$/spring-batch" />
-            <option value="$PROJECT_DIR$/spring-concurrency" />
             <option value="$PROJECT_DIR$/ws-dropwizard" />
           </set>
         </option>

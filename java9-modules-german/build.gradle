@@ -1,4 +1,6 @@
-apply plugin: 'java'
+plugins {
+    id 'java'
+}
 
 ext {
     moduleName = 'org.mrmat.hello.java.modules.impl.german'

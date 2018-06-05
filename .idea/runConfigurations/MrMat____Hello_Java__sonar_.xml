@@ -1,8 +1,8 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="spring-batch (run)" type="GradleRunConfiguration" factoryName="Gradle" singleton="true">
+  <configuration default="false" name="MrMat :: Hello Java (sonar)" type="GradleRunConfiguration" factoryName="Gradle" singleton="true">
     <ExternalSystemSettings>
       <option name="executionName" />
-      <option name="externalProjectPath" value="$PROJECT_DIR$/spring-batch" />
+      <option name="externalProjectPath" value="$PROJECT_DIR$" />
       <option name="externalSystemIdString" value="GRADLE" />
       <option name="scriptParameters" value="" />
       <option name="taskDescriptions">
@@ -10,7 +10,7 @@
       </option>
       <option name="taskNames">
         <list>
-          <option value="bootRun" />
+          <option value="sonarqube" />
         </list>
       </option>
       <option name="vmOptions" value="" />

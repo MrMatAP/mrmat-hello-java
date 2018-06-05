@@ -1,6 +1,4 @@
 rootProject.name = 'mrmat-hello-java'
-include 'spring-concurrency'
-include 'spring-batch'
 include 'javaee-jsp'
 include 'javaee-jsf'
 include 'java8-optional'
@@ -10,4 +8,3 @@ include 'java9-modules-app'
 include 'java9-modules-api'
 include 'java9-modules-english'
 include 'java9-modules-german'
-

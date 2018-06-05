@@ -1,13 +1,9 @@
-group 'org.mrmat'
-
-apply plugin: 'java'
-apply plugin: 'war'
+plugins {
+    id 'java'
+    id 'war'
+}
 
 sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
-}
 
 dependencies {
     compile group: 'org.apache.cxf', name: 'cxf-rt-frontend-jaxws', version: '3.2.1'

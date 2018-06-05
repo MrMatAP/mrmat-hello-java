@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":javaee-jaxws" external.linked.project.path="$MODULE_DIR$/../../javaee-jaxws" external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="org.mrmat" external.system.module.version="" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":javaee-jaxws" external.linked.project.path="$MODULE_DIR$/../../javaee-jaxws" external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="mrmat-hello-java" external.system.module.version="" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="web" name="Web">
       <configuration>
@@ -11,14 +11,13 @@
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/../../javaee-jaxws/src/main/java" />
-          <root url="file://$MODULE_DIR$/../../javaee-jaxws/src/main/resources" />
         </sourceRoots>
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
       <configuration />
     </facet>
-    <facet type="web" name="Web Gradle : javaee-jaxws-0.13.0-dev.13.uncommitted+78435ee.war">
+    <facet type="web" name="Web Gradle : javaee-jaxws-0.13.0-dev.16.uncommitted+jpa.e4ed3ee.war">
       <configuration>
         <descriptors>
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/../../javaee-jaxws/src/main/webapp/WEB-INF/web.xml" />
@@ -28,7 +27,6 @@
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/../../javaee-jaxws/src/main/java" />
-          <root url="file://$MODULE_DIR$/../../javaee-jaxws/src/main/resources" />
         </sourceRoots>
       </configuration>
     </facet>
@@ -40,8 +38,6 @@
     <content url="file://$MODULE_DIR$/../../javaee-jaxws">
       <sourceFolder url="file://$MODULE_DIR$/../../javaee-jaxws/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../javaee-jaxws/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../javaee-jaxws/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../../javaee-jaxws/src/test/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/../../javaee-jaxws/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../javaee-jaxws/build" />
       <excludeFolder url="file://$MODULE_DIR$/../../javaee-jaxws/out" />

@@ -11,8 +11,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/java9-modules-app/mrmat-hello-java-java9-modules-app.iml" filepath="$PROJECT_DIR$/.idea/modules/java9-modules-app/mrmat-hello-java-java9-modules-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/java9-modules-english/mrmat-hello-java-java9-modules-english.iml" filepath="$PROJECT_DIR$/.idea/modules/java9-modules-english/mrmat-hello-java-java9-modules-english.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/java9-modules-german/mrmat-hello-java-java9-modules-german.iml" filepath="$PROJECT_DIR$/.idea/modules/java9-modules-german/mrmat-hello-java-java9-modules-german.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-batch/spring-batch.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-batch/spring-batch.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-concurrency/spring-concurrency.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-concurrency/spring-concurrency.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ws-dropwizard/ws-dropwizard.iml" filepath="$PROJECT_DIR$/.idea/modules/ws-dropwizard/ws-dropwizard.iml" />
     </modules>
   </component>

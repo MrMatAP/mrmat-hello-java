@@ -5,10 +5,7 @@
     <output-test url="file://$MODULE_DIR$/../../../java8-optional/out/test/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../java8-optional">
-      <sourceFolder url="file://$MODULE_DIR$/../../../java8-optional/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../java8-optional/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../java8-optional/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../java8-optional/src/test/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/../../../java8-optional/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../java8-optional/build" />
       <excludeFolder url="file://$MODULE_DIR$/../../../java8-optional/out" />
