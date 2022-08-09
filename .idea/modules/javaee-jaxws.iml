@@ -17,7 +17,7 @@
     <facet type="Spring" name="Spring">
       <configuration />
     </facet>
-    <facet type="web" name="Web Gradle : javaee-jaxws-0.13.0-dev.17.uncommitted+fd7105d.war">
+    <facet type="web" name="Web Gradle : javaee-jaxws-0.13.0-dev.21.uncommitted+9551f78.war">
       <configuration>
         <descriptors>
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/../../javaee-jaxws/src/main/webapp/WEB-INF/web.xml" />
@@ -32,8 +32,8 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/../../javaee-jaxws/out/production/classes" />
-    <output-test url="file://$MODULE_DIR$/../../javaee-jaxws/out/test/classes" />
+    <output url="file://$MODULE_DIR$/../../javaee-jaxws/build/classes/java/main" />
+    <output-test url="file://$MODULE_DIR$/../../javaee-jaxws/build/classes/java/test" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../javaee-jaxws">
       <sourceFolder url="file://$MODULE_DIR$/../../javaee-jaxws/src/main/java" isTestSource="false" />

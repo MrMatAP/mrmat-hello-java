@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java8-optional/java8-optional.iml" filepath="$PROJECT_DIR$/.idea/modules/java8-optional/java8-optional.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaee-jaxws.iml" filepath="$PROJECT_DIR$/.idea/modules/javaee-jaxws.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaee-jsf/javaee-jsf.iml" filepath="$PROJECT_DIR$/.idea/modules/javaee-jsf/javaee-jsf.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaee-jsp/javaee-jsp.iml" filepath="$PROJECT_DIR$/.idea/modules/javaee-jsp/javaee-jsp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" filepath="$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java9-modules-api/mrmat-hello-java-java9-modules-api.iml" filepath="$PROJECT_DIR$/.idea/modules/java9-modules-api/mrmat-hello-java-java9-modules-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java9-modules-app/mrmat-hello-java-java9-modules-app.iml" filepath="$PROJECT_DIR$/.idea/modules/java9-modules-app/mrmat-hello-java-java9-modules-app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java9-modules-english/mrmat-hello-java-java9-modules-english.iml" filepath="$PROJECT_DIR$/.idea/modules/java9-modules-english/mrmat-hello-java-java9-modules-english.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java9-modules-german/mrmat-hello-java-java9-modules-german.iml" filepath="$PROJECT_DIR$/.idea/modules/java9-modules-german/mrmat-hello-java-java9-modules-german.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ws-dropwizard/ws-dropwizard.iml" filepath="$PROJECT_DIR$/.idea/modules/ws-dropwizard/ws-dropwizard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaee-jsf/javaee-jsf.iml" filepath="$PROJECT_DIR$/.idea/modules/javaee-jsf/javaee-jsf.iml" group="mrmat-hello-java/javaee-jsf" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaee-jsp/javaee-jsp.iml" filepath="$PROJECT_DIR$/.idea/modules/javaee-jsp/javaee-jsp.iml" group="mrmat-hello-java/javaee-jsp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" filepath="$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" group="mrmat-hello-java" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ws-dropwizard/ws-dropwizard.iml" filepath="$PROJECT_DIR$/.idea/modules/ws-dropwizard/ws-dropwizard.iml" group="mrmat-hello-java/ws-dropwizard" />
     </modules>
   </component>
 </project>
