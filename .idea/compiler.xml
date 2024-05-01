@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="17">
       <module name="java8-optional" target="1.8" />
       <module name="java9-modules-api" target="1.8" />
       <module name="java9-modules-app" target="1.8" />
@@ -10,7 +10,6 @@
       <module name="javaee-jaxws" target="1.8" />
       <module name="javaee-jsf" target="1.8" />
       <module name="javaee-jsp" target="1.8" />
-      <module name="mrmat-hello-java" target="1.9" />
       <module name="mrmat-hello-java-java9-modules-api" target="1.9" />
       <module name="mrmat-hello-java-java9-modules-app" target="1.8" />
       <module name="mrmat-hello-java-java9-modules-english" target="1.8" />

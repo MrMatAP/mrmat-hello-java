@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaee-jsf/javaee-jsf.iml" filepath="$PROJECT_DIR$/.idea/modules/javaee-jsf/javaee-jsf.iml" group="mrmat-hello-java/javaee-jsf" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaee-jsp/javaee-jsp.iml" filepath="$PROJECT_DIR$/.idea/modules/javaee-jsp/javaee-jsp.iml" group="mrmat-hello-java/javaee-jsp" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" filepath="$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" group="mrmat-hello-java" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ws-dropwizard/ws-dropwizard.iml" filepath="$PROJECT_DIR$/.idea/modules/ws-dropwizard/ws-dropwizard.iml" group="mrmat-hello-java/ws-dropwizard" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" filepath="$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaee-jsf/mrmat-hello-java.javaee-jsf.iml" filepath="$PROJECT_DIR$/.idea/modules/javaee-jsf/mrmat-hello-java.javaee-jsf.iml" />
     </modules>
   </component>
 </project>

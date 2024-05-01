@@ -1,8 +1,8 @@
 package org.mrmat.hello.java.ws.dropwizard;
 
-import io.dropwizard.Application;
-import io.dropwizard.setup.Bootstrap;
-import io.dropwizard.setup.Environment;
+import io.dropwizard.core.Application;
+import io.dropwizard.core.setup.Bootstrap;
+import io.dropwizard.core.setup.Environment;
 import org.mrmat.hello.java.ws.dropwizard.helloworld.HelloWorldHealthCheck;
 import org.mrmat.hello.java.ws.dropwizard.helloworld.HelloWorldResource;
 
@@ -24,7 +24,6 @@ public class DWApplication extends Application<DWConfiguration> {
 
     @Override
     public void initialize(Bootstrap<DWConfiguration> bootstrap) {
-
         super.initialize(bootstrap);
     }
 
