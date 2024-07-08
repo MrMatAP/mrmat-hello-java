@@ -1,6 +1,6 @@
 plugins {
     java
-    id("org.sonarqube") version "5.0.0.4638"
+    id("org.sonarqube") version "5.1.0.4882"
     id("nebula.release") version "19.0.7"
 }
 
