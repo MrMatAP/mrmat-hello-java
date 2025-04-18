@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" filepath="$PROJECT_DIR$/.idea/modules/mrmat-hello-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ddd/mrmat-hello-java.ddd.iml" filepath="$PROJECT_DIR$/.idea/modules/ddd/mrmat-hello-java.ddd.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/javaee-jsf/mrmat-hello-java.javaee-jsf.iml" filepath="$PROJECT_DIR$/.idea/modules/javaee-jsf/mrmat-hello-java.javaee-jsf.iml" />
     </modules>
   </component>
