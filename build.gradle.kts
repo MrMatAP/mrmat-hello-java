@@ -1,22 +1,12 @@
 plugins {
     java
-    id("org.sonarqube") version "5.1.0.4882"
-    id("nebula.release") version "19.0.7"
 }
 
 group = "org.mrmat.hello.java"
 
 allprojects {
+    version = System.getenv("MRMAT_VERSION") ?: "0.0.0-SNAPSHOT"
     repositories {
         mavenCentral()
     }
 }
-
-
-//sonarqube {
-//    properties {
-//        property "sonar.sourceEncoding", "UTF-8"
-//    }
-//}
-
-//nebulaRelease.addReleaseBranchPattern(/develop/)
