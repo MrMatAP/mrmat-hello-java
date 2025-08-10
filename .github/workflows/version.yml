@@ -7,22 +7,22 @@ on:
   workflow_call
 
 jobs:
-  version:
+  construct:
     runs-on: ubuntu-latest
     steps:
-    - name: Calculate build version
-      id: version
+    - name: Construct build version
+      id: construct
       run: |
-        MRMAT_VERSION="${MAJOR}.${MINOR}.${GITHUB_RUN_NUMBER}"
+        VERSION="${MAJOR}.${MINOR}.${GITHUB_RUN_NUMBER}"
         if [ "$GITHUB_REF" == 'refs/heads/main' ]; then
-          MRMAT_IS_RELEASE=true
-          echo "::notice ::Building release ${MRMAT_VERSION}"
-          echo "MRMAT_IS_RELEASE=true" >> $GITHUB_OUTPUT
+          IS_RELEASE=true
+          echo "::notice ::Building release ${VERSION}"
+          echo "IS_RELEASE=true" >> $GITHUB_OUTPUT
         else
-          MRMAT_VERSION="${MRMAT_VERSION}-SNAPSHOT"
-          echo "::notice ::Building version ${MRMAT_VERSION}"
+          VERSION="${VERSION}-SNAPSHOT"
+          echo "::notice ::Building version ${VERSION}"
         fi
-        echo "MRMAT_VERSION=${MRMAT_VERSION}" >> $GITHUB_OUTPUT
+        echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
     outputs:
-      version: ${{ steps.version.outputs.MRMAT_VERSION }}
-      is_release: ${{ steps.version.outputs.MRMAT_IS_RELEASE }}
+      version: ${{ steps.construct.outputs.VERSION }}
+      is_release: ${{ steps.construct.outputs.IS_RELEASE }}
