@@ -1,8 +1,7 @@
 #
-# This workflow triggers for a release via a PR to main. It covers both the maturity evaluation before the
-# PR is approved and the release it is merged into main
+# This workflow triggers for a release via a PR to main. It runs in the context of the base branch (main)
 
-name: pull-request.yml
+name: pr-release
 on:
   pull_request_target:
     types: [assigned, opened, synchronize, reopened]
@@ -10,7 +9,6 @@ on:
 
 jobs:
   checks:
-    if: github.event.pull_request.merged == false
     runs-on: ubuntu-latest
     steps:
     - run: |
