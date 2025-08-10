@@ -29,8 +29,8 @@ jobs:
         fi
         echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
     outputs:
-      version: ${{ steps.version.outputs.VERSION }}
-      is_release: ${{ steps.version.outputs.IS_RELEASE }}
+      version: ${{ steps.construct.outputs.VERSION }}
+      is_release: ${{ steps.construct.outputs.IS_RELEASE }}
 
   build:
     runs-on: ubuntu-latest
@@ -52,6 +52,7 @@ jobs:
         key: ${{ runner.os }}
         path: |
           .gradle/configuration-cache
+          .gradle/wrapper/dists
 
     - name: Build
       env:
