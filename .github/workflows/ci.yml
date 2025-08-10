@@ -9,7 +9,7 @@ name: Build
 env:
   MAJOR: 0
   MINOR: 0
-  JAVA_VERSION: 3.13.0
+  JAVA_VERSION: 17
 
 #
 # Establish when the workflow is run
@@ -28,6 +28,8 @@ on:
 # Workflow
 
 jobs:
+  version:
+    uses: ./.github/workflows/version.yml
 
   build:
     runs-on: ubuntu-latest
@@ -36,24 +38,11 @@ jobs:
     - name: Checkout out our code
       uses: actions/checkout@v4
 
-    - name: Calculate Build Context
-      run: |
-        MRMAT_VERSION="${MAJOR}.${MINOR}.${GITHUB_RUN_NUMBER}"
-        if [ "$GITHUB_EVENT_NAME" == 'pull_request_target' -a "$GITHUB_BASE_REF" == 'main' ]; then
-          MRMAT_IS_RELEASE=true
-          echo "::warning ::Building release ${MRMAT_VERSION}"
-          echo "MRMAT_IS_RELEASE=true" >> $GITHUB_ENV
-        else
-          MRMAT_VERSION="${MRMAT_VERSION}-SNAPSHOT"
-          echo "::warning ::Building version ${MRMAT_VERSION}"
-        fi
-        echo "MRMAT_VERSION=${MRMAT_VERSION}" >> $GITHUB_ENV
-
     - name: Setup Java
       uses: actions/setup-java@v4
       with:
         distribution: temurin
-        java-version: '17'
+        java-version: ${{ env.JAVA_VERSION }}
 
     - name: Setup a cache
       uses: actions/cache@v4
@@ -64,4 +53,6 @@ jobs:
           ~/.gradle/wrapper
 
     - name: Build
+      env:
+        MRMAT_VERSION: ${{ needs.version.outputs.MRMAT_VERSION }}
       run: ./gradlew build
