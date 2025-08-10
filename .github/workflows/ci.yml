@@ -49,7 +49,7 @@ jobs:
 
     - name: Build
       env:
-        MRMAT_VERSION: ${{ jobs.version.outputs.version }}
+        MRMAT_VERSION: ${{ needs.version.outputs.version }}
       run: |
         echo "VERSION: $MRMAT_VERSION"
         ./gradlew build
