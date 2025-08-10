@@ -1,0 +1,28 @@
+env:
+  MAJOR: 0
+  MINOR: 0
+
+name: version
+on:
+  workflow_call
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Calculate build version
+      id: version
+      run: |
+        MRMAT_VERSION="${MAJOR}.${MINOR}.${GITHUB_RUN_NUMBER}"
+        if [ "$GITHUB_EVENT_NAME" == 'pull_request_target' -a "$GITHUB_BASE_REF" == 'main' ]; then
+          MRMAT_IS_RELEASE=true
+          echo "::notice ::Building release ${MRMAT_VERSION}"
+          echo "MRMAT_IS_RELEASE=true" >> $GITHUB_OUTPUT
+        else
+          MRMAT_VERSION="${MRMAT_VERSION}-SNAPSHOT"
+          echo "::notice ::Building version ${MRMAT_VERSION}"
+        fi
+        echo "MRMAT_VERSION=${MRMAT_VERSION}" >> $GITHUB_OUTPUT
+    outputs:
+      version: ${{ steps.version.outputs.MRMAT_VERSION }}
+      is_release: ${{ steps.version.outputs.MRMAT_IS_RELEASE }}
