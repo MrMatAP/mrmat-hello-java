@@ -18,6 +18,7 @@ jobs:
         echo "The PR was checked"
 
   version:
+    if: github.event.pull_request.merged == true
     uses: ./.github/workflows/version.yml
 
   release:
