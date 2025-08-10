@@ -48,5 +48,5 @@ jobs:
 
     - name: Build
       env:
-        MRMAT_VERSION: ${{ needs.version.outputs.MRMAT_VERSION }}
+        MRMAT_VERSION: ${{ needs.version.outputs.version }}
       run: ./gradlew build

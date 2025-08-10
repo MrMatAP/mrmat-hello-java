@@ -32,9 +32,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ jobs.version.outputs.MRMAT_VERSION }}
-        release_name: Release ${{ needs.version.outputs.MRMAT_VERSION }}
+        tag_name: ${{ needs.version.outputs.version }}
+        release_name: Release ${{ needs.version.outputs.version }}
         body: |
-          Release ${{ jobs.version.outputs.MRMAT_VERSION }}
+          Release ${{ needs.version.outputs.version }}
         draft: false
         prerelease: false
