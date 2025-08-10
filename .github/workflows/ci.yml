@@ -7,17 +7,11 @@ name: Build
 # Operational Variables
 
 env:
-  MAJOR: 0
-  MINOR: 0
   JAVA_VERSION: 17
 
 #
-# Establish when the workflow is run
-# We do build on every push except when we push onto main (which ought to be subject to branch protection)
-# We do build whenever a PR onto main is closed (see on) and the code is actually merged (see release job if)
-# Why is that okay?
-# Since we're making a PR, we know from the previous workflow run on push that the repo is okay and the PR
-# shows that to us. A PR itself doesn't cause a build, except when it is closed and the changes were merged.
+# Establish when the workflow is run.
+# We run on all branches except main, for which the release workflow applies
 
 on:
   push:

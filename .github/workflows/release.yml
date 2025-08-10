@@ -1,19 +1,34 @@
 #
 # This workflow triggers checks for a PR and then a release when it is merged
 
-name: release
+name: pr-checks
 on:
   push:
     branches: [main]
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
+    branches: [main]
 
 jobs:
-  release:
+  checks:
+    if: github.event.pull_request.merged == false
     runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "The PR was checked"
+
+  version:
+    uses: ./.github/workflows/version.yml
+
+  release:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    needs: version
     steps:
     - name: Conditional Release
       uses: marvinpinto/action-automatic-releases@latest
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "${{ env.MRMAT_VERSION }}"
+        automatic_release_tag: ${{ needs.version.outputs.MRMAT_VERSION }}
         prerelease: false
-        title: "Release ${{ env.MRMAT_VERSION }}"
+        title: "Release ${{ needs.version.outputs.MRMAT_VERSION }}"
