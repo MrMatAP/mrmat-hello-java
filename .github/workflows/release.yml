@@ -1,7 +1,7 @@
 #
 # This workflow triggers checks for a PR and then a release when it is merged
 
-name: pr-checks
+name: release
 on:
   push:
     branches: [main]
