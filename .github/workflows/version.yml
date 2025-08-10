@@ -14,7 +14,7 @@ jobs:
       id: version
       run: |
         MRMAT_VERSION="${MAJOR}.${MINOR}.${GITHUB_RUN_NUMBER}"
-        if [ "$GITHUB_EVENT_NAME" == 'pull_request_target' -a "$GITHUB_BASE_REF" == 'main' ]; then
+        if [ "$GITHUB_REF" == 'refs/heads/main' ]; then
           MRMAT_IS_RELEASE=true
           echo "::notice ::Building release ${MRMAT_VERSION}"
           echo "MRMAT_IS_RELEASE=true" >> $GITHUB_OUTPUT
