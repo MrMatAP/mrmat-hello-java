@@ -1,0 +1,15 @@
+#
+# This workflow runs the checks for a release via a PR to main. It runs in the context of the head branch
+
+name: pr-checks
+on:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
+    branches: [main]
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "The PR was checked"
