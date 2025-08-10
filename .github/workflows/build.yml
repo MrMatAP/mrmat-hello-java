@@ -23,11 +23,6 @@ on:
   push:
     branches-ignore:
     - main
-  pull_request_target:
-    branches:
-    - main
-    types:
-    - closed
 
 #
 # Workflow
@@ -70,12 +65,3 @@ jobs:
 
     - name: Build
       run: ./gradlew build
-
-    - name: Conditional Release
-      uses: marvinpinto/action-automatic-releases@latest
-      if: (github.event.pull_request.merged == true && github.base_ref == 'main')
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "${{ env.MRMAT_VERSION }}"
-        prerelease: false
-        title: "Release ${{ env.MRMAT_VERSION }}"

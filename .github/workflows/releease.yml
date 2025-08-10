@@ -1,0 +1,31 @@
+#
+# This workflow triggers for a release via a PR to main. It covers both the maturity evaluation before the
+# PR is approved and the release it is merged into main
+
+name: pull-request.yml
+on:
+  pull_request_target:
+    types: [opened, reopened]
+    branches: [main]
+
+jobs:
+  pre-approval:
+    if: github.event.pull_request.merged == false
+    runs-on: ubuntu-latest
+    steps:
+    - name: Testing
+      - run: |
+        echo "Would test here"
+
+  release:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - name: Conditional Release
+      uses: marvinpinto/action-automatic-releases@latest
+      if: (github.event.pull_request.merged == true)
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "${{ env.MRMAT_VERSION }}"
+        prerelease: false
+        title: "Release ${{ env.MRMAT_VERSION }}"
