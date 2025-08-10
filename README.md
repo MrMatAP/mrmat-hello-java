@@ -33,4 +33,3 @@ is injected by GitHub Actions itself, resulting in a discrete version of the pro
 ### SAST
 
 SAST is provided by CodeQL straight in the main `.github/workflows/codeql.yml` workflow.
-
