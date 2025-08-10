@@ -26,10 +26,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: version
     steps:
-    - name: Conditional Release
-      uses: marvinpinto/action-automatic-releases@latest
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: ${{ needs.version.outputs.MRMAT_VERSION }}
+        tag_name: ${{ needs.version.outputs.MRMAT_VERSION }}
+        release_name: Release ${{ needs.version.outputs.MRMAT_VERSION }}
+        body: |
+          Release ${{ needs.version.outputs.MRMAT_VERSION }}
+        draft: false
         prerelease: false
-        title: "Release ${{ needs.version.outputs.MRMAT_VERSION }}"
