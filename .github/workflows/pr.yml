@@ -1,13 +1,19 @@
 #
-# This workflow triggers for a release via a PR to main. It runs in the context of the base branch (main)
+# This workflow triggers checks for a PR and then a release when it is merged
 
-name: pr-release
+name: pr-checks
 on:
-  pull_request_target:
+  pull_request:
     types: [assigned, opened, synchronize, reopened]
     branches: [main]
 
 jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "The PR was checked"
+
   release:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
