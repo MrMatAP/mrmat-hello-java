@@ -9,13 +9,12 @@ on:
     branches: [main]
 
 jobs:
-  pre-approval:
+  pre_approval:
     if: github.event.pull_request.merged == false
     runs-on: ubuntu-latest
     steps:
-    - name: Testing
-      - run: |
-        echo "Would test here"
+    - run: |
+        echo The PR was tested"
 
   release:
     if: github.event.pull_request.merged == true
