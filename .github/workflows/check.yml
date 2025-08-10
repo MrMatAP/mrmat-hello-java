@@ -1,0 +1,30 @@
+#
+# Check the project during a PR
+
+name: check
+
+#
+# Operational Variables
+
+env:
+  JAVA_VERSION: 17
+
+#
+# Establish when the workflow is run.
+# We run as part of a PR
+
+on:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
+
+#
+# Workflow
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "The PR was checked"
+
+
