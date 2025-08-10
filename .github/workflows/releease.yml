@@ -5,11 +5,11 @@
 name: pull-request.yml
 on:
   pull_request_target:
-    types: [opened, reopened]
+    types: [assigned, opened, synchronize, reopened]
     branches: [main]
 
 jobs:
-  pre_approval:
+  checks:
     if: github.event.pull_request.merged == false
     runs-on: ubuntu-latest
     steps:
