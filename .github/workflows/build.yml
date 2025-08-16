@@ -51,12 +51,11 @@ jobs:
       with:
         key: ${{ runner.os }}
         path: |
-          .gradle/configuration-cache
-          .gradle/wrapper/dists
+          ~/.gradle
 
     - name: Build
       env:
         MRMAT_VERSION: ${{ needs.version.outputs.version }}
       run: |
-        echo "VERSION: $MRMAT_VERSION"
+        echo "::notice ::Building release ${VERSION}"
         ./gradlew --no-daemon build
