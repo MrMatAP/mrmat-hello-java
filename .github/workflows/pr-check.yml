@@ -1,11 +1,17 @@
 #
-# Perform a regular build on any branch except main
+# Perform a PR check build
 
-name: build
+name: pr-check
 
 on:
-  push:
-    branches-ignore: [main]
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+
+#
+# Workflow
 
 jobs:
   version:
@@ -15,22 +21,28 @@ jobs:
     runs-on: ubuntu-latest
     needs: version
     steps:
-
     - name: Checkout out our code
       uses: actions/checkout@v4
-
     - name: Setup Java
       uses: actions/setup-java@v4
       with:
         distribution: temurin
         java-version: ${{ env.JAVA_VERSION }}
-
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
-
+      with:
+        add-job-summary-as-pr-comment: 'always'
     - name: Build
       env:
         MRMAT_VERSION: ${{ needs.version.outputs.version }}
       run: |
-        echo "::notice ::Building version ${MRMAT_VERSION}"
+        echo "::notice ::Building PR check build ${MRMAT_VERSION}"
         ./gradlew --no-daemon build
+
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "The PR was checked"
+
+
