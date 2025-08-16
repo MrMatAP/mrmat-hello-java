@@ -1,5 +1,6 @@
 plugins {
-    java
+    id("java")
+    id("pmd")
 }
 
 group = "org.mrmat.hello.java"
