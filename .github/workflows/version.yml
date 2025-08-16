@@ -9,7 +9,6 @@ name: version
 env:
   MAJOR: 0
   MINOR: 0
-  JAVA_VERSION: 17
 
 on:
   workflow_call
