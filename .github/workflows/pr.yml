@@ -1,7 +1,7 @@
 #
 # Perform a PR check build
 
-name: pr-check
+name: pr
 
 on:
   pull_request:
@@ -20,7 +20,7 @@ jobs:
   version:
     uses: ./.github/workflows/version.yml
 
-  build:
+  checks:
     runs-on: ubuntu-latest
     needs: version
     steps:
@@ -40,12 +40,5 @@ jobs:
         MRMAT_VERSION: ${{ needs.version.outputs.version }}
       run: |
         echo "::notice ::Building PR check build ${MRMAT_VERSION}"
-        ./gradlew --no-daemon build
-
-  checks:
-    runs-on: ubuntu-latest
-    steps:
-    - run: |
-        echo "The PR was checked"
-
-
+        ./gradlew --no-daemon pr
+        ls build/

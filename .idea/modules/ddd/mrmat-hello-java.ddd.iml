@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id=":ddd" external.linked.project.path="$MODULE_DIR$/../../../ddd" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="org.mrmat.hello.ddd" external.system.module.version="0.0.0-SNAPSHOT" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_24">
+  <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/../../../ddd/build/classes/java/main" />
     <output-test url="file://$MODULE_DIR$/../../../ddd/build/classes/java/test" />
     <exclude-output />
