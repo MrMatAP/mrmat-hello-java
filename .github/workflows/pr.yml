@@ -40,5 +40,18 @@ jobs:
         MRMAT_VERSION: ${{ needs.version.outputs.version }}
       run: |
         echo "::notice ::Building PR check build ${MRMAT_VERSION}"
-        ./gradlew --no-daemon pr
-        ls build/
+        ./gradlew --no-daemon build testCodeCoverageReport testAggregateTestReport
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}           # run this step even if previous step failed
+      with:
+        name: test-results
+        path: '**/build/test-results/test/*.xml'
+    - name: Report
+      if: ${{ !cancelled() }}
+      uses: dorny/test-reporter@v2
+      with:
+        name: JUnit Tests
+        reporter: java-junit
+        path: '**/build/test-results/test/*.xml'
+        fail-on-error: false
+

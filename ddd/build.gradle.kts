@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("jvm-test-suite")
     id("pmd")
     id("jacoco")
 }
@@ -23,6 +24,10 @@ tasks.named<Test>("test") {
     maxHeapSize = "1G"
     testLogging {
         events("passed")
+    }
+    reports {
+        junitXml.required.set(true)
+        html.required.set(false)
     }
 }
 

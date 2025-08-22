@@ -35,7 +35,7 @@ jobs:
         MRMAT_VERSION: ${{ needs.version.outputs.version }}
       run: |
         echo "::notice ::Building release ${MRMAT_VERSION}"
-        ./gradlew --no-daemon release
+        ./gradlew --no-daemon build
     - name: Generate and submit dependency graph
       uses: gradle/actions/dependency-submission@v4
 
