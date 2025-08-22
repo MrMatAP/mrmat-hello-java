@@ -41,12 +41,7 @@ jobs:
       run: |
         echo "::notice ::Building PR check build ${MRMAT_VERSION}"
         ./gradlew --no-daemon build testCodeCoverageReport testAggregateTestReport
-    - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}           # run this step even if previous step failed
-      with:
-        name: test-results
-        path: '**/build/test-results/test/*.xml'
-    - name: Report
+    - name: Report on Unit tests
       if: ${{ !cancelled() }}
       uses: dorny/test-reporter@v2
       with:
@@ -54,4 +49,12 @@ jobs:
         reporter: java-junit
         path: '**/build/test-results/test/*.xml'
         fail-on-error: false
-
+    - name: Add coverage to PR
+      id: jacoco
+      uses: madrapps/jacoco-report@v1.7.2
+      with:
+        paths: |
+          ${{ github.workspace }}/build/reports/jacoco/**/testCodeCoverageReport.xml
+        token: ${{ secrets.GITHUB_TOKEN }}
+        min-coverage-overall: 40
+        min-coverage-changed-files: 60
