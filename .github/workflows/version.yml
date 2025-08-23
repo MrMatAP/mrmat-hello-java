@@ -11,7 +11,14 @@ env:
   MINOR: 0
 
 on:
-  workflow_call
+  workflow_call:
+    outputs:
+      version:
+        description: The calculated version for this build
+        value: ${{ jobs.version.outputs.version }}
+      is_release:
+        description: Whether this is a release build
+        value: ${{ jobs.version.outputs.is_release }}
 
 jobs:
   version:
