@@ -45,7 +45,6 @@ jobs:
     - name: Build
       run: |
         echo "::notice ::PR check version ${MRMAT_VERSION}"
-        echo "::notice ::Alternative version ${{ needs.version.outputs.version }}"
         ./gradlew --no-daemon build jacocoTestReport testCodeCoverageReport testAggregateTestReport
 
     - name: Report on unit tests

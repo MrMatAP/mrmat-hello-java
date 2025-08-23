@@ -32,6 +32,7 @@ subprojects {
 
     plugins.withId("pmd") {
         pmd {
+            version = "7.16.0"
             isConsoleOutput = true
             rulesMinimumPriority = 5
             ruleSets = listOf("category/java/errorprone.xml", "category/java/bestpractices.xml")
