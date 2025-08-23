@@ -24,6 +24,8 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     needs: version
+    env:
+      MRMAT_VERSION: "${{ needs.version.outputs.version }}"
     steps:
 
     - name: Checkout out our code
@@ -41,22 +43,20 @@ jobs:
         add-job-summary-as-pr-comment: 'always'
 
     - name: Build
-      env:
-        MRMAT_VERSION: ${{ needs.version.outputs.version }}
       run: |
         echo "::notice ::PR check version ${MRMAT_VERSION}"
+        echo "::notice ::Alternative version ${{ needs.version.outputs.version }}"
         ./gradlew --no-daemon build jacocoTestReport testCodeCoverageReport testAggregateTestReport
 
-    - name: Add unit test report
+    - name: Report on unit tests
       uses: EnricoMi/publish-unit-test-result-action@v2
       if: (!cancelled())
       with:
         check_name: "Unit Tests"
         comment_title: "Unit Tests"
-        files: |
-          ${{ github.workspace }}/**/build/test-results/test/TEST-*.xml'
+        files: "./**/build/test-results/test/TEST-*.xml"
 
-    - name: Add code coverage to PR
+    - name: Report on code coverage
       id: jacoco
       uses: madrapps/jacoco-report@v1.7.2
       with:
