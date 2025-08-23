@@ -44,9 +44,10 @@ jobs:
       uses: gradle/actions/dependency-submission@v4
 
   release:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    needs: build
+    needs:
+    - version
+    - build
     steps:
     - name: Create Release
       id: create_release
