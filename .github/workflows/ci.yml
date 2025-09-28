@@ -1,0 +1,89 @@
+#
+# CI Build
+
+name: build
+
+on:
+  push:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
+
+jobs:
+  # Dynamically calculate the version of this build
+  version:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+    - name: Version the project
+      id: version
+      uses: MrMatAP/mrmat-versioning-action@1.0.7
+      with:
+        ecosystem: java
+        major: 1
+        minor: 0
+
+  build:
+    runs-on: ubuntu-latest
+    needs: version
+    permissions:
+      contents: read
+    steps:
+    - name: Checkout out our code
+      uses: actions/checkout@v5
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: 23
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v4
+    - name: Build
+      env:
+        MRMAT_VERSION: ${{ needs.version.outputs.version }}
+      run: |
+        echo "::notice ::Building version ${MRMAT_VERSION}"
+        ./gradlew --no-daemon build
+
+  report:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    needs:
+    - version
+    - build
+    permissions:
+      pull-requests: write
+      checks: write
+      contents: read
+    steps:
+    - name: PR Build
+      env:
+        MRMAT_VERSION: ${{ needs.version.outputs.version }}
+      run: |
+        echo "::notice ::Building version ${MRMAT_VERSION}"
+        ./gradlew --no-daemon pr
+
+  # The release job only executes when pushing to the main branch
+  release:
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    needs:
+    - version
+    - build
+    steps:
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ needs.version.outputs.version }}
+        release_name: Release ${{ needs.version.outputs.version }}
+        body: |
+          Release ${{ needs.version.outputs.version }}
+        draft: false
+        prerelease: false
