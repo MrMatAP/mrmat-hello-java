@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("jvm-test-suite")
     id("pmd")
     id("jacoco")
 }
@@ -7,7 +8,7 @@ plugins {
 group = "org.mrmat.hello.ddd"
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter:5.7.1")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.13.4")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
@@ -23,6 +24,10 @@ tasks.named<Test>("test") {
     maxHeapSize = "1G"
     testLogging {
         events("passed")
+    }
+    reports {
+        junitXml.required.set(true)
+        html.required.set(false)
     }
 }
 

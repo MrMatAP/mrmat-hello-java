@@ -18,6 +18,7 @@
       <module name="mrmat-hello-java.ddd" target="25" />
       <module name="mrmat-hello-java_main" target="1.8" />
       <module name="mrmat-hello-java_test" target="1.8" />
+      <module name="org.mrmat.hello.ddd.mrmat-hello-java.ddd" target="25" />
       <module name="spring-batch" target="1.8" />
       <module name="spring-concurrency" target="1.8" />
       <module name="spring-jpa" target="1.8" />
